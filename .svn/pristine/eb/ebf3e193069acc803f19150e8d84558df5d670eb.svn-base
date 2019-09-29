@@ -1,0 +1,273 @@
+<template>
+  <div class="header">
+    <div class="head" :style="{background:this.$store.state.baseColor[0].headColor}">
+
+      <div class="head-l">
+        <a href="#"><img class="img-l"
+              :src="this.$store.state.baseImg[0]"/></a>
+        <a href="#"><img class="img-r"
+               src="../assets/imgs/p2.png" /></a>
+        <a href="#"
+           class="caidan" @click="clickCaidan"><i class="iconfont icon-caidangongneng"></i></a>
+      </div>
+
+      <div class="head-c">
+        <ul>
+          <li v-for="(item,index) in headList"
+              @click="addClass(index)"
+              :class="{ active:index==current}"><a href="#">{{item.title}}</a></li>
+        </ul>
+        <a href="#"
+           class="icon"><i class="iconfont icon-leimupinleifenleileibie"></i></a>
+      </div>
+
+      <div class="head-r">
+        <div class="head-r-c">
+          <a href="#"><img class="img-tou"
+                 src="../assets/imgs/tou.png" /></a>
+          <div>管理员，您好</div>
+        </div>
+        <div class="head-r-r">
+          <ul>
+            <li><a href="#"><i class="iconfont icon-shezhi"></i></a></li>
+            <li><a href="#"><i class="iconfont icon-yifu"></i></a></li>
+            <li><a href="#"><i class="iconfont icon-lingdang"></i></a></li>
+            <li><a href="#"><i class="iconfont icon-guanji"></i></a></li>
+          </ul>
+        </div>
+          
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Head',
+  data: function () {
+    return {
+      a:1,//头部菜单点击按钮开关,
+      headList: [
+        { id: 0, title: '工作首页' },
+        { id: 0, title: '基础数据' },
+        { id: 1, title: '平台管理' },
+        { id: 2, title: '费用报销' },
+        { id: 3, title: '运输管理' }
+      ],
+      current: 0,
+
+    }
+  },
+  mounted () {
+console.log(this.$store.state.baseImg[0].headImg[0])
+  },
+  methods: {
+    addClass: function (index) {
+      this.current = index
+    },
+    clickCaidan:function () {
+      if(this.a==0){
+        // $(".home-detail").css({
+        //   "width":"88%",
+        //   "left":"13%"
+        // })
+        //   $(".job-home").css({
+        //   "display":"block",      
+        // })
+        $(".job-home").animate({left:"0" }, "500",function() {
+               $(".home-detail").animate({
+                  "width":"88%",
+                  "left":"13%"
+               },500)
+        });
+      
+        this.a=1
+        
+      }else{
+        $(".job-home").animate({ left: '-13%' , }, "500",function() {
+               $(".home-detail").animate({
+                  "width":"100%",
+                  "left":"0"
+               },500)
+        });
+        //  $(".job-home").css({
+        //   "display":"none",
+        // })
+        // $(".home-detail").css({
+        //   "width":"100%",     
+        //   "left":"0"
+        // })
+        this.a=0
+      }
+      
+    },
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+/* *{margin: 0;padding: 0;min-width: 1200px; margin: 0 auto; font-size: 16px; font-family:Microsoft YaHei;} */
+#app {
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+.header {
+  width: 100%;
+  overflow: hidden;
+  height: 8%;
+}
+.head {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* background: linear-gradient(to right, #b43232, #eb7373); */
+  position: relative;
+}
+
+.head-l {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+.head .head-l .img-l {
+  position: absolute;
+  width: 10%;
+  height: 45%;
+  left: 0.5%;
+  top: 20%;
+}
+.head .img-r {
+  position: absolute;
+  width: 13%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+}
+.head .head-l .caidan {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  margin-left: 27%;
+  top: 30%;
+}
+.head .head-l .caidan .icon-caidangongneng {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  line-height: 100%;
+}
+
+.head .head-c {
+  width: 45%;
+  height: 100%;
+  margin-left: 1%;
+  line-height: 100%;
+  text-align: center;
+  position: relative;
+}
+.head .head-c ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+.head .head-c li {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head .head-c li a {
+  color: #ffffff;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head .head-c .active {
+  background: linear-gradient(to top, #c74949, #f79b9b);
+}
+.head .head-c .icon {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+.head-c .icon-leimupinleifenleileibie {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  line-height: 100%;
+}
+
+.head .head-r {
+  width: 25%;
+  height: 100%;
+  display: flex;
+}
+.head .head-r .head-r-c {
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+}
+.head .head-r .head-r-c .img-tou {
+  width: 32px;
+  height: 32px;
+
+}
+.head .head-r .head-r-c a {
+  
+   flex: 1;
+  text-align: right;
+  align-self: center;
+}
+
+.head .head-r .head-r-c div {
+white-space:nowrap;  
+   flex: 1;
+  text-align: right;
+  align-self: center;
+  font-size: 12px;
+  color: #ffffff; 
+}
+.head .head-r-r{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head .head-r ul {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.head .head-r li {
+  width: 25%;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right:15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head .head-r li a {
+  color: #ffffff;
+}
+</style>

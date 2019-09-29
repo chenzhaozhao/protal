@@ -1,0 +1,93 @@
+{
+  "id": "1420941",
+  "name": "inconfont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "689262",
+      "name": "类目 品类 分类 类别",
+      "font_class": "leimupinleifenleileibie",
+      "unicode": "e7f9",
+      "unicode_decimal": 59385
+    },
+    {
+      "icon_id": "1166005",
+      "name": "首页",
+      "font_class": "iconfontzhizuobiaozhun023101",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "1301391",
+      "name": "衣服",
+      "font_class": "yifu",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "1664368",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "3216109",
+      "name": "右",
+      "font_class": "youjiantou",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "4562857",
+      "name": "铃铛",
+      "font_class": "lingdang",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "4933388",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e750",
+      "unicode_decimal": 59216
+    },
+    {
+      "icon_id": "6129148",
+      "name": "106菜单、功能",
+      "font_class": "caidangongneng",
+      "unicode": "e785",
+      "unicode_decimal": 59269
+    },
+    {
+      "icon_id": "8554273",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "9193129",
+      "name": "检测-报告",
+      "font_class": "jiance",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "9656637",
+      "name": "关机",
+      "font_class": "guanji",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "11072304",
+      "name": "层级",
+      "font_class": "cengji",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    }
+  ]
+}
