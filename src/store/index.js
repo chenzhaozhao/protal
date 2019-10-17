@@ -7,11 +7,11 @@ import mutations from "./mutations";
 import getters from "./getters";
 import state from "./state";
 
-var store = new Vuex.Store({
-    actions: actions,
-    mutations: mutations,
-    getters: getters,
-    state: state
+var store=new Vuex.Store({
+    actions:actions,
+    mutations:mutations,
+    getters:getters,
+    state:state
 })
 
 export default store;
